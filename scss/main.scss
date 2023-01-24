@@ -1,0 +1,128 @@
+// Variables
+
+$primary-color: #ac7088;
+$secondary-color: #deb6ab;
+$delete-color: #e97777;
+$add-color: #829460;
+$warning-color: #632626;
+
+// Base CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $secondary-color;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// button css
+
+.btn {
+  text-align: center;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.add-btn {
+  margin-left: 5px;
+  background-color: $add-color;
+    &:hover {
+      background-color: lighten($add-color, 10);
+      border: 1px solid #333;
+    }
+
+}
+
+#header {
+  width: 100%;
+  margin: 10px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-family: "Roboto", sans-serif;
+
+  .title {
+    color: rgb(37, 37, 37);
+  }
+}
+.fa-circle-check {
+  color: $warning-color;
+  font-size: 50px;
+  padding: 0 !important;
+}
+
+#to-do-list {
+  list-style: none;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin-top: 20px;
+  #task {
+    background-color: #aacb73;
+    margin: 5px 0;
+    padding: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:hover {
+      background-color: #cfe7a8;
+    }
+    #task-check {
+      width: 20px;
+      height: 20px;
+    }
+    .fa-solid {
+      padding: 0 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+#add-task {
+  text-align: center;
+  padding: 20px 0 10px 0;
+}
+
+#input-form {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  input {
+    width: 90%;
+    font-size: 20px;
+    padding: 5px;
+    color: #333;
+    text-transform: uppercase;
+    border: 1px solid rgb(222, 221, 221);
+    border-radius: 5px;
+    transition: 0.5s;
+    &:hover {
+      border: 1px solid #333;
+    }
+  }
+}
+
+
+
+.add-btn
+
+.check-task {
+  padding: 5px;
+}
