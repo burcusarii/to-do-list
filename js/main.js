@@ -1,5 +1,4 @@
 "use strict";
-list = document.getElementById("to-do-list");
 function newTask(event) {
   let li = document.createElement("li");
   li.className ="task";
@@ -13,6 +12,4 @@ function newTask(event) {
     document.getElementById("to-do-list").appendChild(li);
   }
   document.getElementById("input").value = "";
-
-
 }
