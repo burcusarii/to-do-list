@@ -28,13 +28,15 @@
 
     <main>
       <div class="container">
-        <div id="add-task">
-          <div id="input-form">
-            <input type="text" id="input" class="task-input" />
-            <span class="add-btn btn" onclick="newTask()">Ekle</span>
-          </div>
+        <div id="task-input">
+          <input type="text"  id="input">
+          <span onclick="newTask()" class="btn add-btn">Ekle</span>
         </div>
-        <ul id="to-do-list"></ul>
+       
+      </div>
+
+      <div class="container">
+        <div><ul id="to-do-list"></ul></div>
       </div>
     </main>
     <script src="js/main.js"></script>
