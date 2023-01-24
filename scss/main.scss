@@ -63,36 +63,28 @@ body {
   font-size: 50px;
   padding: 0 !important;
 }
-
+  
 #to-do-list {
   list-style: none;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   margin-top: 20px;
-  #task {
-    background-color: #aacb73;
-    margin: 5px 0;
-    padding: 10px;
-    font-weight: bold;
-    transition: 0.5s;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    &:hover {
-      background-color: #cfe7a8;
-    }
-    #task-check {
-      width: 20px;
-      height: 20px;
-    }
-    .fa-solid {
-      padding: 0 5px;
-      cursor: pointer;
-    }
-  }
+      .task {
+        background-color: #aacb73;
+        margin: 5px 0;
+        padding: 10px;
+        font-weight: bold;
+        transition: 0.5s;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:hover {
+          background-color: #cfe7a8;
+        }
+      }
 }
 
 #add-task {
