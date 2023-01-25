@@ -104,6 +104,11 @@ body {
         &:hover {
           background-color: #cfe7a8;
         }
+        .task-text {
+          width: 93;
+          word-wrap: break-word;
+          text-align: justify;
+        } 
       }
 }
 

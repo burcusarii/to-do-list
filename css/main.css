@@ -71,3 +71,7 @@ body {
     justify-content: space-between; }
     #to-do-list .task:hover {
       background-color: #cfe7a8; }
+    #to-do-list .task .task-text {
+      width: 93;
+      word-wrap: break-word;
+      text-align: justify; }
