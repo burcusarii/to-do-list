@@ -3,9 +3,12 @@ function newTask(event) {
   let li = document.createElement("li");
   li.className ="task";
   let inputValue = document.getElementById("input").value;
-  li.innerHTML = ` <div class ="task-text">${inputValue}</div>
-  <div><i class="fa-solid fa-trash delete"></i>
-  <i class="fa-solid fa-pen-to-square"></i></div>`;
+  li.innerHTML = ` <div class="task-content">
+  <input type="text" id="task-value" readonly="readonly" value="${inputValue}"> </div>
+<div class="task-action">
+  <i class="fa-solid fa-trash delete"></i>
+  <span onclick="editTask()" id="edit-buton" value="EDIT">EDIT</span>
+</div>`;
   if (inputValue === "") {
     alert("bir görev girmelisin.");
   } else {
@@ -22,3 +25,17 @@ function newTask(event) {
   }
 }
 
+function editTask() {
+  let task_edit_botton = document.getElementById("edit-buton");
+  let taskValue = document.getElementById("task-value");
+    if (task_edit_botton.innerText=="EDIT") {
+      console.log("value");
+      taskValue.removeAttribute("readonly");
+      taskValue.focus();
+            task_edit_botton.innerText = "Save";
+    }else{
+      taskValue.setAttribute("readonly", "readonly");
+        task_edit_botton.innerText ="EDIT";
+        
+    }
+  };
