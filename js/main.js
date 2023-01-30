@@ -1,5 +1,3 @@
-newTask();
-function newTask() {
   const add_task = document.querySelector("#task-input");
   const input_task = document.querySelector("#input");
   const tasks_list = document.querySelector("#to-do-list");
@@ -61,9 +59,11 @@ function newTask() {
         added_task.focus();
         edit_button.value = "save";
         added_task.style.textDecoration = "none";
+        edit_button.style.color = "#632626";
       } else {
         added_task.setAttribute("readonly", "readonly");
         edit_button.value = "edit";
+        edit_button.style.color= "#333";
       }
     });
 
@@ -73,8 +73,20 @@ function newTask() {
     input_task.value = "";
 
     completed_button.addEventListener("click", function () {
-      added_task.style.textDecoration = "line-through";
-      added_task.setAttribute("readonly", "readonly");
+      if (added_task.style.textDecoration == "none") {
+        added_task.style.textDecoration = "line-through";
+        added_task.setAttribute("readonly", "readonly");
+        completed_button.style.color = "#ac7088"
+        added_task.style.color = "#632626"
+      }
+      else {
+        added_task.style.textDecoration = "none";
+        completed_button.style.color = "#333";
+        added_task.style.color = "#333"
+
+
+
+      }
     });
   });
-}
+
