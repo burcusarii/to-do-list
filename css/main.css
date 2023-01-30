@@ -73,25 +73,23 @@ body {
     flex-wrap: wrap; }
     #to-do-list .task:hover {
       background-color: #cfe7a8; }
-
-.task-content {
-  display: flex;
-  flex: 15; }
-
-.task-value {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  width: 100%;
-  appearance: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  word-break: break-all; }
-
-.task-action {
-  display: flex;
-  flex: 1; }
-  .task-action span {
-    margin-left: 8px;
-    font-size: 20px;
-    color: #333; }
+    #to-do-list .task .task-content {
+      display: flex;
+      flex: 15; }
+      #to-do-list .task .task-content .task-value {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        appearance: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        word-break: break-all;
+        text-transform: uppercase; }
+    #to-do-list .task .task-action {
+      display: flex;
+      flex: 1; }
+      #to-do-list .task .task-action span {
+        margin-left: 8px;
+        font-size: 20px;
+        color: #333; }
