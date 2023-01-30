@@ -24,6 +24,7 @@
     const added_task = document.createElement("input");
     added_task.classList.add("task-value");
     added_task.type = "text";
+    added_task.style.textDecoration = "none";
     added_task.value = input_task.value;
     added_task.setAttribute("readonly", "readonly");
     task_div_content.append(added_task);
@@ -82,11 +83,15 @@
         added_task.setAttribute("readonly", "readonly");
         completed_button.style.color = "#ac7088"
         added_task.style.color = "#632626"
+        added_task.classList.add("completed");
+
       }
       else {
         added_task.style.textDecoration = "none";
         completed_button.style.color = "#333";
-        added_task.style.color = "#333"
+        added_task.style.color = "#333";
+        added_task.classList.remove("completed");
+
       }
     });
     input_task.value = "";
