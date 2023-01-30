@@ -45,7 +45,8 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 0;
-  justify-content: space-between; }
+  justify-content: space-between;
+  gap: 10px; }
   #task-input #input {
     padding: 10px;
     border: 1px solid #fff;

@@ -3,7 +3,8 @@
   const tasks_list = document.querySelector("#to-do-list");
   const add_btn = document.querySelector("#task-add");
 
-  add_btn.addEventListener("click", function () {
+  add_task.addEventListener("submit", function (event) {
+    event.preventDefault();
     if (input_task.value == "") {
       alert("lütfen bir görev giriniz.");
       return;
