@@ -13,6 +13,7 @@
     // task listesine altına her bir task için eklenen list elemanı
     const task_li = document.createElement("li");
     task_li.classList.add("task");
+    task_li.classList.add("incomplete");
     tasks_list.appendChild(task_li);
 
     // her task elemanı içine oluşturulan task başlığının yer aldığı content elemanı;
@@ -25,6 +26,8 @@
     added_task.classList.add("task-value");
     added_task.type = "text";
     added_task.style.textDecoration = "none";
+    added_task.style.color = "#333";
+
     added_task.value = input_task.value;
     added_task.setAttribute("readonly", "readonly");
     task_div_content.append(added_task);
@@ -63,11 +66,20 @@
         added_task.focus();
         edit_button.value = "save";
         added_task.style.textDecoration = "none";
+        added_task.style.color = "#ac7088";
         edit_button.style.color = "#632626";
+        completed_button.style.color = "#333";
+        completed_button.style.pointerEvents = "none";
+        task_li.classList.remove("completed");
+        task_li.classList.add("incomplete");;
       } else {
         added_task.setAttribute("readonly", "readonly");
         edit_button.value = "edit";
         edit_button.style.color= "#333";
+        completed_button.style.color = "#333"
+        added_task.style.color = "#333";
+        completed_button.style.pointerEvents = "auto";
+
       }
     });
 
@@ -83,17 +95,24 @@
         added_task.setAttribute("readonly", "readonly");
         completed_button.style.color = "#ac7088"
         added_task.style.color = "#632626"
-        added_task.classList.add("completed");
-
+        task_li.classList.remove("incomplete");
+        task_li.classList.add("completed");
+        edit_button.style.pointerEvents = "none";
       }
       else {
         added_task.style.textDecoration = "none";
         completed_button.style.color = "#333";
         added_task.style.color = "#333";
-        added_task.classList.remove("completed");
+        task_li.classList.remove("completed");
+        task_li.classList.add("incomplete");
+        edit_button.style.pointerEvents = "auto";
+
 
       }
     });
-  
     input_task.value = "";
-  });
+  })
+ 
+
+
+ 

@@ -22,13 +22,13 @@ body {
   margin: 0 auto;
 }
 
-// button css 
+// button css  
 
 .btn {
   text-align: center;
   padding: 10px 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   transition: 0.5s;
@@ -43,6 +43,12 @@ body {
 
 }
 
+.primary-btn {
+  background-color: $primary-color;
+  &:hover {
+    background-color: lighten($primary-color, 18);
+  }
+}
 #main-header {
   width: 100%;
   margin: 10px auto 0;
@@ -81,7 +87,11 @@ body {
   }
 }
 
+//task-filter
 
+#task-filter {
+  margin: 20px 0;
+}
 
 // To-do-list
 
