@@ -94,6 +94,6 @@
 
       }
     });
+  
     input_task.value = "";
   });
-
